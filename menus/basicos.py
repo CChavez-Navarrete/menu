@@ -1,6 +1,12 @@
 from clases.basicos.ejercicio1 import Recta
 from clases.basicos.ejercicio2 import cordenadas
 from clases.basicos.ejercicio3 import Fx_ecuacion
+from clases.ciclos.ejercicio5 import Sumatorias
+from clases.condicionales.ejercicio14 import NumEntero_numPrimo
+from clases.condicionales.ejercicio17 import Dosnum_divicion
+from clases.condicionales.ejercicio18 import Persona
+from clases.condicionales.ejercicio20 import IMC
+from clases.condicionales.ejercicio24 import SalaJuegos
 from clases.condicionales.ejercicio4 import Circunferencia
 
 class basicos(object):
@@ -37,7 +43,39 @@ class basicos(object):
                 radio= Circunferencia(0,0,0)
                 radio.leer_datos()
                 radio.calcular_punto(radio.x2, radio.y2)
-                radio.imprimir_punto()         
+                radio.imprimir_punto()
+            case 5:
+                radio= Sumatorias()
+                radio.leer_datos()
+                radio.calcular_sumatoria()
+                radio.imprimir_sumatoria()
+            case 6:
+            case 14:
+                numero = NumEntero_numPrimo()
+                numero.leer_datos()
+                numero.calcular_primo()
+                numero.imprimir_primo()
+            case 17:
+                divicion = Dosnum_divicion()
+                divicion.leer_datos()
+                divicion.calcular_divicion()
+                divicion.imprimir_divicion()
+            case 18:
+                grupo = Persona()
+                grupo.leer()
+                grupo.calcular()
+                grupo.imprimir()
+            case 20:
+                persona = IMC()
+                persona.leer()
+                persona.calcular()
+                persona.imprimir()
+            case 24:
+                cliente = SalaJuegos()
+                cliente.leer()
+                cliente.calcular()
+                cliente.imprimir()
+
     def ejecutar(self):
         while self.opcion!=4:
             self.mostrar_menu_basicos()
